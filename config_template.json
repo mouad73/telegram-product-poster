@@ -1,0 +1,11 @@
+{
+    "bot_token": "YOUR_BOT_TOKEN_HERE",
+    "excel_file_path": "",
+    "target_channels": [
+        "@yourchannel",
+        "-1001234567890"
+    ],
+    "message_template": "🛍️ **{Product Name}**\n\n💰 Price: {Price}\n🆔 ID: {ProductId}\n📦 Category: {Category}\n\n#products #deals",
+    "posting_delay": 60,
+    "last_posted_products": []
+}

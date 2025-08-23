@@ -1,0 +1,6 @@
+﻿# Core dependencies for Telegram Product Poster
+pandas>=2.0.0          # Excel file processing and data manipulation
+requests>=2.31.0        # HTTP requests for Telegram API
+openpyxl>=3.0.0         # Excel file reading/writing support
+
+# Note: tkinter is included with Python standard library (no installation needed)
