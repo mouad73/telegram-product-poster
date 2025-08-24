@@ -166,6 +166,43 @@ The app automatically creates a `config.json` file to save your settings:
 }
 ```
 
+### 📂 Config File Management
+
+#### **Default Config File**
+- **Location**: Same folder as the application
+- **Name**: `config.json`
+- **Auto-Creation**: Created automatically when you save settings
+
+#### **Creating a New Config File**
+If you need to start fresh or create multiple configurations:
+
+1. **Delete Existing Config**: Remove `config.json` from the app folder
+2. **Restart App**: The app will create a new empty config file
+3. **Configure Settings**: Set up your bot token, channels, and templates
+4. **Save**: Click "Save Configuration" to create the new file
+
+#### **Changing Config File Name**
+For advanced users who want custom config file names:
+
+1. **Open the Python File**: Edit `telegram_product_poster.py`
+2. **Find Config Line**: Look for `self.config_file = "config.json"`
+3. **Change Name**: Replace with your desired name (e.g., `"my_config.json"`)
+4. **Save and Restart**: Save the file and restart the application
+
+```python
+# Example: Change config file name
+self.config_file = "my_custom_config.json"  # Change this line
+```
+
+#### **Multiple Configurations**
+You can maintain multiple config files for different setups:
+- `config_products.json` - For product posting
+- `config_news.json` - For news posting  
+- `config_promotions.json` - For promotional content
+
+Just change the config file name in the code for each setup.
+```
+
 ## ⚠️ Important Notes
 
 ### Telegram Limits
