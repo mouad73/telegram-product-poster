@@ -236,19 +236,6 @@ class TelegramProductPoster:
         main_frame = ttk.Frame(parent)
         main_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
         
-        # Instructions
-        instructions_frame = ttk.LabelFrame(main_frame, text="Message Template Instructions", padding=15)
-        instructions_frame.pack(fill=tk.X, pady=(0, 20))
-        
-        instructions = ttk.Label(instructions_frame,
-                                text="Customize your message template using placeholders:\n" +
-                                     "Available placeholders: {product_name}, {description}, {origin_price}, {discount_price}, {discount_percentage}, {currency},\n" +
-                                     "{category}, {product_url}, {image_url}, {commission_rate}, {estimated_commission}, {sales_count}, {feedback_score},\n" +
-                                     "{code_start_time}, {code_end_time}, {code_value}, {code_quantity}, {code_minimum_spend}, {timestamp}\n" +
-                                     "Example: 🛍️ {product_name}\\n� Discount Price: {discount_price} {currency}\\n🔗 {product_url}",
-                                justify=tk.LEFT, foreground='blue')
-        instructions.pack(anchor=tk.W)
-        
         # Message Template
         template_frame = ttk.LabelFrame(main_frame, text="Message Template", padding=15)
         template_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 20))
