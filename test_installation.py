@@ -1,7 +1,14 @@
 #!/usr/bin/env python3
 """
-Installation Test Script for Telegram Product Poster
-Run this script to verify all dependencies are properly installed.
+🛍️ Telegram Product Poster - Installation Test Script
+👨‍💻 Created by: Tech Mouad
+📺 YouTube: https://www.youtube.com/@techmouad
+📸 Instagram: https://www.instagram.com/tech_mouad/
+
+Run this script to verify all dependencies are properly installed
+before using the Telegram Product Poster app.
+
+Usage: python test_installation.py
 """
 
 import sys
@@ -76,6 +83,8 @@ def test_file_structure():
 def main():
     """Run all tests"""
     print("🔍 Telegram Product Poster - Installation Test")
+    print("👨‍💻 Created by: Tech Mouad")
+    print("📺 YouTube: https://www.youtube.com/@techmouad")
     print("=" * 50)
     
     # System info
@@ -92,6 +101,7 @@ def main():
     if python_ok and deps_ok and files_ok:
         print("🎉 SUCCESS! Everything is ready to go!")
         print("\n🚀 You can now run: python telegram_product_poster.py")
+        print("💡 Follow the README.md for complete setup instructions!")
     else:
         print("❌ ISSUES FOUND! Please fix the problems above.")
         
@@ -102,8 +112,10 @@ def main():
         if not files_ok:
             print("\n💡 Make sure you have all required files in the project folder.")
     
-    print("\n📚 For help, check README.md or visit:")
-    print("   YouTube: https://www.youtube.com/@techmouad")
+    print("\n📚 For help and tutorials:")
+    print("   📺 YouTube: https://www.youtube.com/@techmouad")
+    print("   📸 Instagram: https://www.instagram.com/tech_mouad/")
+    print("   📖 README: Check README.md for detailed instructions")
 
 if __name__ == "__main__":
     main()

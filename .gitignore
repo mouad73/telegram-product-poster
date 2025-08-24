@@ -28,8 +28,7 @@ config.json
 *.log
 telegram_product_poster.log
 
-# Generated template files
-sample_products_template.xlsx
+# User Excel files (don't commit user data)
 *.xlsx
 *.xls
 
