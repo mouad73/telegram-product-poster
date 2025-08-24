@@ -28,6 +28,11 @@ config.json
 *.log
 telegram_product_poster.log
 
+# Generated template files
+sample_products_template.xlsx
+*.xlsx
+*.xls
+
 # Test files
 test_*.xlsx
 debug_*.py
