@@ -1,4 +1,6 @@
-﻿"""
+﻿#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
 Telegram Product Poster - YouTube Edition
 A simplified application that reads products from Excel and posts to Telegram channels
 
@@ -23,12 +25,12 @@ from datetime import datetime
 import time
 import requests
 
-# Setup logging
+# Setup logging with UTF-8 encoding
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('telegram_product_poster.log'),
+        logging.FileHandler('telegram_product_poster.log', encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
@@ -853,7 +855,7 @@ Happy posting! 🚀"""
         """Load configuration from file"""
         try:
             if os.path.exists(self.config_file):
-                with open(self.config_file, 'r') as f:
+                with open(self.config_file, 'r', encoding='utf-8') as f:
                     config = json.load(f)
                     self.bot_token_var.set(config.get('bot_token', ''))
                     self.excel_file_path.set(config.get('excel_file_path', ''))
@@ -916,8 +918,8 @@ Happy posting! 🚀"""
                 'column_settings': column_settings
             }
             
-            with open(self.config_file, 'w') as f:
-                json.dump(config, f, indent=4)
+            with open(self.config_file, 'w', encoding='utf-8') as f:
+                json.dump(config, f, indent=4, ensure_ascii=False)
                 
             messagebox.showinfo("Success", "Configuration saved successfully!")
             logging.info("Configuration saved successfully")
@@ -1407,8 +1409,9 @@ Happy posting! 🚀"""
             self.logs_text.see(tk.END)
             self.root.update_idletasks()
         
-        # Also log to file
-        logging.info(message)
+        # Also log to file - remove emojis for compatibility
+        clean_message = message.encode('ascii', errors='ignore').decode('ascii')
+        logging.info(clean_message)
         
     def refresh_logs(self):
         """Refresh logs display"""
