@@ -82,6 +82,26 @@ Your Excel file can have **any structure**! The app adapts to your column header
 | 12345 | Gaming Mouse | $29.99 | https://... | Electronics |
 | 67890 | Wireless Headphones | $79.99 | https://... | Audio |
 
+#### 📝 Need a Template?
+
+If you need a sample Excel file to get started, use the included helper tool:
+
+```bash
+python create_sample_template.py
+```
+
+This will create `sample_products_template.xlsx` with:
+- ✅ **Sample Data**: 5 example products with realistic information
+- ✅ **Column Examples**: Shows common column structures
+- ✅ **Best Practices**: Demonstrates optimal data formatting
+- ✅ **Ready to Use**: Just replace with your real data
+
+**Generated Template Includes:**
+- Product Name, Description, Pricing
+- Image URLs, Product URLs
+- Categories, Stock Status, Ratings
+- And more useful columns!
+
 ## 📱 How to Use
 
 ### 1. Launch the Application
